@@ -6,10 +6,19 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #dde1e5;
+    font-family: NexonLv1Gothic;
 }
 
 .header-left {
     height: 100%;
+}
+
+.menu-icon {
+    width: 16px;
+    height: 20px;
+    background-image: url("/public/icons/menu.svg");
+    background-size: cover;
+    margin-right: 11px;
 }
 
 .header-left > a {
@@ -19,8 +28,13 @@ header {
     align-items: center;
 }
 
-.header-left > a > img {
-    margin-right: 11px;
+.header-left > a:hover {
+    color: #0077ff;
+    .menu-icon {
+        background-image: url("/public/icons/menu-hover.svg");
+        transition: background-image 0.3s ease;
+    }
+    transition: color 0.2s ease;
 }
 
 .header-logo {
@@ -37,53 +51,138 @@ header {
 .naver,
 .card,
 .pc {
-    background: #dde1e5;
-    margin-left: 14px;
+    margin-left: 16px;
     height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.connect > a {
+    width: 16px;
+    height: 16px;
+    background-image: url("/public/icons/connect.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.connect > a:hover {
+    background-image: url("/public/icons/connect-hover.svg");
+    .connect-text {
+        display: block;
+    }
+}
+
+.naver > a {
+    width: 18px;
+    height: 18px;
+    background-image: url("/public/icons/naver.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.naver > a:hover {
+    background-image: url("/public/icons/naver-hover.svg");
+    .naver-text {
+        display: block;
+    }
+}
+
+.card > a {
+    width: 18px;
+    height: 18px;
+    background-image: url("/public/icons/card.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card > a:hover {
+    background-image: url("/public/icons/card-hover.svg");
+    .card-text {
+        display: block;
+    }
+}
+
+.pc > a {
+    width: 18px;
+    height: 18px;
+    background-image: url("/public/icons/pc.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pc > a:hover {
+    background-image: url("/public/icons/pc-hover.svg");
+    .pc-text {
+        display: block;
+    }
 }
 
 .connect > a,
 .naver > a,
 .card > a,
 .pc > a {
-    background: rebeccapurple;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.header-right > div > a > img {
-    width: 22px;
-    height: 22px;
+.connect-text,
+.naver-text,
+.card-text,
+.pc-text {
+    background-color: #1b1f24;
+    color: #ffffffe6;
+    padding: 1px 6px;
+    border-radius: 15px;
+    font-size: 11px;
+    position: absolute;
+    top: 42px;
+    display: none;
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 .join {
-    background: #dde1e5;
-    margin: 0 18px;
+    margin: 0 16px;
     height: 100%;
     display: flex;
-    align-items: center;
+    font-size: 14px;
 }
 
 .join > a {
-    background: red;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+.join > a:hover{
+    color: #07f;
+}
+
 .login {
-    background: #dde1e5;
     height: 100%;
     margin-right: 23px;
     display: flex;
     align-items: center;
+    font-size: 15px;
 }
 
 .login > a {
-    padding: 6px 18px;
+    padding: 7px 18px;
     display: flex;
     align-items: center;
     border: 2px solid #000;
     border-radius: 25px;
+    font-weight: bold;
+}
+
+.login > a:hover {
+    background-color: #07f;
+    color: #fff;
+    border: 2px solid #07f;
 }
